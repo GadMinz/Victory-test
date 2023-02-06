@@ -1,0 +1,39 @@
+.users {
+  &_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    @media screen and (max-width: 410px) {
+      margin-bottom: 32px;
+    }
+  }
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  &_item {
+    padding: 24px;
+    background: #ffffff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    width: 380px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: box-shadow 200ms;
+    &:hover {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    }
+    &_username {
+      font-size: 12px;
+      line-height: 16px;
+      margin-bottom: 16px;
+      margin-top: 4px;
+    }
+    &_email {
+      margin-bottom: 4px;
+    }
+  }
+}
