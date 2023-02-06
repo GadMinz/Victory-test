@@ -1,0 +1,51 @@
+@import "normalize";
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fafafa;
+  line-height: 24px;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 60px 50px;
+  @media screen and (max-width: 410px) {
+    padding: 32px 20px;
+  }
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: 1px solid #000000;
+  font-size: 14px;
+  line-height: 24px;
+  transition: opacity 200ms;
+  &:hover {
+    opacity: 0.5;
+  }
+  &:active {
+    opacity: 1;
+  }
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.base_input {
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 12px 15px;
+  &.error {
+    border: 1px solid #fa4444;
+  }
+}
