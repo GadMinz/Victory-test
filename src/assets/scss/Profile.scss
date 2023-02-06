@@ -1,0 +1,29 @@
+.profile {
+  h1 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 48px;
+    @media screen and (max-width: 410px) {
+      margin-bottom: 32px;
+    }
+  }
+  &_username {
+    font-size: 14px;
+    font-weight: 400;
+    position: absolute;
+    top: -10px;
+    left: calc(100% + 15px);
+    @media screen and (max-width: 410px) {
+      position: static;
+      display: block;
+    }
+  }
+  &_info {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 32px;
+    &_item {
+      min-width: 295px;
+    }
+  }
+}

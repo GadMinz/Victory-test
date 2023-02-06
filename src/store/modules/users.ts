@@ -26,13 +26,22 @@ const actions = {
     const users = await UserServices.getAll();
     commit("setUsers", users);
     commit("setLoading", false);
-  }
+  },
+  async getCurrentUser({ commit }: ActionContext<IUsersState, IRootState>, id:string) {
+    commit("setLoading", true);
+    const currentUser = await UserServices.getOne(id);
+    commit("setCurrentUser", currentUser);
+    commit("setLoading", false);
+  },
 };
 
 // mutations
 const mutations = {
   setUsers(state: IUsersState, payload: IUser[]) {
     state.all = payload;
+  },
+  setCurrentUser(state: IUsersState, payload: IUser) {
+    state.current = payload;
   },
   setLoading(state: IUsersState, payload: boolean) {
     state.loading = payload;
