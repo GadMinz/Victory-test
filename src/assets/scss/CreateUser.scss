@@ -1,0 +1,29 @@
+.create_user-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 48px 0;
+  &-item {
+    max-width: 380px;
+    width: 100%;
+  }
+  input,
+  label {
+    display: block;
+    width: 100%;
+  }
+  input {
+    margin-top: 8px;
+  }
+
+  @media screen and (min-width: 880px) {
+    &-item:last-child,
+    &-item:nth-last-child(2) {
+      max-width: 180px;
+    }
+  }
+  @media screen and (max-width: 879px) {
+    justify-content: center;
+    margin: 32px 0;
+  }
+}
