@@ -6,8 +6,8 @@ const props = defineProps({
   value: { type: String, default: "" },
   error: { type: Boolean, default: false },
 });
-const updateValue = (e: { target: { value: string } }) => {
-  emit("update:value", e.target.value);
+const updateValue = (e: InputEvent) => {
+  emit("update:value", (e.target as HTMLTextAreaElement).value);
 };
 </script>
 
